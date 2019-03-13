@@ -10,6 +10,10 @@ sudo npm config set unsafe-perm true
 # Essential CLI tools
 sudo npm install -g composer-cli@0.20
 
+#cd /usr/local/lib/node_modules/composer-cli
+#sudo npm rebuild --unsafe-perm
+#cd -
+
 # Utility for running a REST Server on your machine to expose your business networks as RESTful APIs
 sudo npm install -g composer-rest-server@0.20
 

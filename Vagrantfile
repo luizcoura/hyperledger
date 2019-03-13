@@ -24,13 +24,14 @@ Vagrant.configure("2") do |config|
     usermod -aG docker vagrant
 
     # INSTALL DOCKER-COMPOSE
-    curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
 
     # INSTALL NPM AND NODEJS
     apt-get install -y npm
-    npm install -g npm@latest
+    # npm install -g npm@5.6.0 -g
+    npm install -g npm@latest -g
     npm install -g n
-    n lts
+    n 8.9.4
   SHELL
 end
